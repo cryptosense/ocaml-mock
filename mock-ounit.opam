@@ -9,8 +9,12 @@ doc: "https://cryptosense.github.io/ocaml-mock/doc"
 build: [
   [ "dune" "build" "-p" name "-j" jobs ]
 ]
+run-test: [
+  [ "dune" "runtest" "-p" name "-j" jobs ]
+]
 depends: [
   "dune" {build}
   "mock"
   "ounit"
+  "ppx_deriving" {with-test}
 ]
