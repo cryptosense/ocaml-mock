@@ -7,11 +7,10 @@ license: "BSD-2"
 dev-repo: "https://github.com/cryptosense/ocaml-mock.git"
 doc: "https://cryptosense.github.io/ocaml-mock/doc"
 build: [
-  [ "jbuilder" "subst" ] {pinned}
-  [ "jbuilder" "build" "-p" name "-j" jobs ]
+  [ "dune" "build" "-p" name "-j" jobs ]
 ]
 depends: [
-  "jbuilder" {build & >="1.0+beta10"}
+  "dune" {build}
   "mock"
   "ounit"
 ]
