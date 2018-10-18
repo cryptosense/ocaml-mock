@@ -18,3 +18,4 @@ depends: [
   "ounit"
   "ppx_deriving" {with-test}
 ]
+synopsis: "OUnit wrapper for OCaml mock"

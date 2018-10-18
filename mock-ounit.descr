@@ -1,7 +1,0 @@
-Configurable functions to test impure code
-
-This package provides "mocks", fake functions that can be configured to return
-values or raise exceptions. It is possible to inspect their arguments after
-their execution. The API is greatly inspired by unittest.mock in Python.
-
-Thie package is a wrapper for `OUnit2`.
