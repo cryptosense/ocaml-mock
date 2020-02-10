@@ -11,6 +11,7 @@ build: [
 ]
 depends: [
   "dune"
+  "ocaml" {>= "4.04.0"}
 ]
 synopsis: "Configurable functions to test impure code"
 description: """
