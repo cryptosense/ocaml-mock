@@ -12,7 +12,7 @@ let not_configured = None
 
 let eval_side_effect = function
   | Return x -> x
-  | Raise e -> Pervasives.raise e
+  | Raise e -> Stdlib.raise e
 
 type ('args, 'ret) t =
   { name: string
@@ -39,7 +39,7 @@ let call mock args =
   match !(mock.side_effect) with
   | None
     ->
-    Pervasives.raise (Mock_not_configured mock.name)
+    Stdlib.raise (Mock_not_configured mock.name)
   | Some effect
     ->
     begin
