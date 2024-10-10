@@ -40,11 +40,11 @@ let call mock args =
   | None
     ->
     Stdlib.raise (Mock_not_configured mock.name)
-  | Some effect
+  | Some side_effect
     ->
     begin
       mock.params := args :: !(mock.params);
-      eval_side_effect effect
+      eval_side_effect side_effect
     end
 
 let recorded_calls mock =
